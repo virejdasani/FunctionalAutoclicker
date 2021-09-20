@@ -46,32 +46,23 @@ button_1 = Button(
 )
 button_1.place(
     x=63.999999999999986,
-    y=300.0,
+    y=286.0,
     width=146.0,
     height=55.0
 )
 
 canvas.create_text(
-    85.99999999999999,
-    283.0,
-    anchor="nw",
-    text="Start",
-    fill="#EFEFEF",
-    font=("Poppins SemiBold", 30 * -1)
-)
-
-canvas.create_text(
-    1.4210854715202004e-14,
+    20.999999999999986,
     10.0,
     anchor="nw",
     text="Autoclicker",
-    fill="#EBEBEB",
-    font=("Poppins SemiBold", 40 * -1)
+    fill="#FFFFFF",
+    font=("Poppins Regular", 40 * -1)
 )
 
 canvas.create_text(
-    77.99999999999999,
-    109.0,
+    72.99999999999999,
+    111.0,
     anchor="nw",
     text="Delay",
     fill="#FFFFFF",
@@ -80,7 +71,7 @@ canvas.create_text(
 
 canvas.create_text(
     46.999999999999986,
-    156.0,
+    157.0,
     anchor="nw",
     text="Shortcut",
     fill="#FFFFFF",
@@ -89,7 +80,7 @@ canvas.create_text(
 
 canvas.create_text(
     11.999999999999986,
-    207.0,
+    206.0,
     anchor="nw",
     text="Click Count",
     fill="#FFFFFF",
@@ -99,8 +90,8 @@ canvas.create_text(
 entry_image_1 = PhotoImage(
     file=relative_to_assets("entry_1.png"))
 entry_bg_1 = canvas.create_image(
-    195.5,
-    125.5,
+    185.5,
+    126.0,
     image=entry_image_1
 )
 entry_1 = Entry(
@@ -109,17 +100,17 @@ entry_1 = Entry(
     highlightthickness=0
 )
 entry_1.place(
-    x=165.5,
-    y=112.0,
-    width=60.0,
-    height=25.0
+    x=150.0,
+    y=111.0,
+    width=71.0,
+    height=28.0
 )
 
 entry_image_2 = PhotoImage(
     file=relative_to_assets("entry_2.png"))
 entry_bg_2 = canvas.create_image(
-    195.5,
-    172.5,
+    186.5,
+    172.0,
     image=entry_image_2
 )
 entry_2 = Entry(
@@ -128,17 +119,17 @@ entry_2 = Entry(
     highlightthickness=0
 )
 entry_2.place(
-    x=165.5,
-    y=159.0,
-    width=60.0,
-    height=25.0
+    x=151.0,
+    y=157.0,
+    width=71.0,
+    height=28.0
 )
 
 entry_image_3 = PhotoImage(
     file=relative_to_assets("entry_3.png"))
 entry_bg_3 = canvas.create_image(
-    195.5,
-    221.5,
+    186.5,
+    221.0,
     image=entry_image_3
 )
 entry_3 = Entry(
@@ -147,37 +138,19 @@ entry_3 = Entry(
     highlightthickness=0
 )
 entry_3.place(
-    x=165.5,
-    y=208.0,
-    width=60.0,
-    height=25.0
+    x=151.0,
+    y=206.0,
+    width=71.0,
+    height=28.0
 )
 
 canvas.create_text(
-    152.0,
-    112.0,
+    207.0,
+    122.0,
     anchor="nw",
-    text="150 ms",
-    fill="#4C4C4C",
-    font=("Poppins Regular", 20 * -1)
-)
-
-canvas.create_text(
-    152.0,
-    159.0,
-    anchor="nw",
-    text="F",
-    fill="#4C4C4C",
-    font=("Poppins Regular", 20 * -1)
-)
-
-canvas.create_text(
-    152.0,
-    208.0,
-    anchor="nw",
-    text="0",
-    fill="#4C4C4C",
-    font=("Poppins Regular", 20 * -1)
+    text="ms",
+    fill="#000000",
+    font=("Poppins SemiBold", 10 * -1)
 )
 window.resizable(False, False)
 window.mainloop()
