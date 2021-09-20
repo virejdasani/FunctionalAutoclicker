@@ -1,11 +1,11 @@
 import time
 import threading
-from pynput.mouse import Button, Controller
+from pynput.mouse import Button as Btn
+from pynput.mouse import Controller
 from pynput.keyboard import Listener, KeyCode
 
-
 delay = 0.10
-button = Button.left
+button = Btn.left
 start_stop_key = KeyCode(char='f')
 exit_key = KeyCode(char='z')
 
