@@ -28,19 +28,21 @@ class AutoClicker:
         11: keyboard.KeyCode(char='f')
     }
 
-    # Default value
+    # Default values
     break_loop = True
     time_interval = 1.0
     user_defined_mouse_button = Button.left
     user_defined_start = keyboard.Key.f1
     user_defined_stop = keyboard.Key.f2
+    start_stop_key = KeyCode(char='f')
     user_defined_end = keyboard.Key.f3
 
     def __init__(self, master):
         self.master = master
         master.title("Autoclicker")
-        master.geometry(str(master.winfo_screenwidth() // 4) +
-                        'x' + str(master.winfo_screenheight() // 3))
+
+        # Width x Height
+        master.geometry("300x350")
 
         self.time_frame = tk.Frame(master)
         self.time_frame.pack()
@@ -48,11 +50,11 @@ class AutoClicker:
         self.shortcut_frame = tk.Frame(master)
         self.shortcut_frame.pack()
 
-        self.mouse_button_frame = tk.Frame(master)
-        self.mouse_button_frame.pack()
-
         self.top_frame = tk.Frame(master)
         self.top_frame.pack()
+
+        self.mouse_button_frame = tk.Frame(master)
+        self.mouse_button_frame.pack()
 
         self.middle_frame = tk.Frame(master)
         self.middle_frame.pack()
@@ -61,7 +63,7 @@ class AutoClicker:
         self.bottom_frame.pack()
 
         self.label_time = ttk.Label(
-            self.time_frame, text="Time between clicks")
+            self.time_frame, text="Time between clicks (seconds)")
         self.label_time.grid(column=1, row=0)
 
         self.label_shortcut = ttk.Label(
@@ -72,7 +74,7 @@ class AutoClicker:
             self.mouse_button_frame, text="Mouse button to click")
         self.label_mouse_button.grid(column=1, row=0)
 
-        self.label_start = ttk.Label(self.top_frame, text="Start shortcut key")
+        self.label_start = ttk.Label(self.top_frame, text="Key press to activate clicking")
         self.label_start.grid(column=1, row=0)
 
         self.label_stop = ttk.Label(self.middle_frame, text="Stop shortcut key")
@@ -127,8 +129,12 @@ class AutoClicker:
         #            command=self.key_list_start).grid(column=2, row=1)
         # ttk.Button(self.middle_frame, text="Apply",
         #            command=self.key_list_stop).grid(column=2, row=1)
+        # ttk.Button(self.bottom_frame, text="Apply",
+        #            command=self.key_list_end).grid(column=2, row=1)
+
+        # TODO: Change key_list_end to apply function that sets all fields
         ttk.Button(self.bottom_frame, text="Apply",
-                   command=self.key_list_end).grid(column=2, row=1)
+                   command=self.key_list_end).grid(column=1, row=2)
 
         self.mouse = Controller()
 
